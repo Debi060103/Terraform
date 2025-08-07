@@ -15,6 +15,8 @@ This pratice starts on 4-8-25
 <h1>Fourth Day</h1>
 <p>In day-4 i learned about statelock file using lockfile  and dynamo db </p>
 <p># use_lockfile = true   # This is about lock file concept
+<br>
     dynamodb_table = "test"    # This is Dynamo db concept
+    <br>
     encrypt = true
     </p>
