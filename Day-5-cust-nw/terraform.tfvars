@@ -1,0 +1,5 @@
+ami-id = "ami-08a6efd148b1f7504"
+instance_type="t3.micro"
+vpc_cidr="10.0.0.0/16"
+pub_sub_cidr="10.0.1.0/24"
+pvt_sub_cidr="10.0.2.0/24"

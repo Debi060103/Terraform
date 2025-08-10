@@ -6,9 +6,9 @@ resource "aws_instance" "cust" {
   }
 }
 
-resource "aws_vpc" "cust" {
-  cidr_block = "10.0.0.0/16"
-  tags = {
-    Name="cust_vpc"
-  }
-}
+# resource "aws_vpc" "cust" {
+#   cidr_block = "10.0.0.0/16"
+#   tags = {
+#     Name="cust_vpc"
+#   }
+# }
