@@ -32,6 +32,15 @@ resource "aws_internet_gateway" "name" {
 }
 
 
+
+
+# create nat
+resource "aws_nat_gateway" "name" {
+  subnet_id = aws_subnet.pvt.id
+  connectivity_type = "public"
+}
+
+
 # creation of rt
 resource "aws_route_table" "name" {
   vpc_id = aws_vpc.dev.id
