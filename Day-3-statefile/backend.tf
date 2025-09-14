@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "whyilu"
-    key = "terraform.tfstate"
+    key = "errored.tfstate"
     region = "us-east-1"
   }
 }

@@ -24,4 +24,7 @@ variable "pvt_sub_cidr" {
   default = ""
 }
 
-
+variable "subnet" {
+  type = number
+  default = null
+}
