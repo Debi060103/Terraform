@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: Day-2-basic-code-tfvars
+        working-directory: Day-2-main-config-file
 
     steps:
       - name: Checkout repository
