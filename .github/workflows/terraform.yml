@@ -35,3 +35,8 @@ jobs:
       - name: Terraform Plan
         working-directory: Day-2-main-config-file
         run: terraform plan
+
+        # --- Terraform apply ---
+      - name: Terraform apply
+        working-directory: Day-2-main-config-file
+        run: terraform apply -auto-approve
