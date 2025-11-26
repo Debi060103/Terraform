@@ -1,4 +1,4 @@
-name: Terraform CI/CD
+name: Terraform CI
 
 on:
   push:
@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # --- Clone Repository ---
-      - name: Checkout Repo
+      # --- Clone Repository (like Jenkins clone stage) ---
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       # --- Setup Terraform ---
@@ -21,14 +21,10 @@ jobs:
 
       # --- Terraform Init ---
       - name: Terraform Init
+        working-directory: Day-2-main-config-file
         run: terraform init
 
       # --- Terraform Plan ---
       - name: Terraform Plan
+        working-directory: Day-2-main-config-file
         run: terraform plan
-
-      # --- Terraform Apply ---
-      # Apply only on push to main, not on PR
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve
